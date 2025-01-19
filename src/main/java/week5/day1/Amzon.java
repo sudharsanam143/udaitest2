@@ -18,8 +18,7 @@ public class Amzon {
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("phones",Keys.ENTER);
-		List<WebElement> mobiles = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
+				List<WebElement> mobiles = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
 		for(int i=0;i<mobiles.size();i++) {
 			String amount = mobiles.get(i).getText();
 			System.out.println(amount);
